@@ -73,12 +73,13 @@ public class Bulbasaur {
     public boolean equals(Object obj) {
         // TODO: Implement this method
         // Compare this Bulbasaur object with another object
-        int comp_id = obj.getID();
-        int comp_lv = obj.getLevel();
-
-        if(comp_id==id){
-            if(comp_lv==level){
-                return true;
+        if(obj instanceof Bulbasaur){
+            int comp_id = ((Bulbasaur)obj).getID();
+            int comp_level = ((Bulbasaur)obj).getLevel();
+            if(comp_id==id){
+                if(comp_level==level){
+                    return true;
+                }
             }
         }
         return false; // Placeholder return value
@@ -88,7 +89,9 @@ public class Bulbasaur {
     public Bulbasaur copy() {
         // TODO: Implement this method
         // Create and return a new Bulbasaur object with the same id and level
-        
-        return null; // Placeholder return value
+        Bulbasaur clone = new Bulbasaur();
+        clone.id = id;
+        clone.level = level;
+        return clone; // Placeholder return value
     }
 }
