@@ -65,7 +65,7 @@ public class Bulbasaur {
         int lv = getLevel();
         int id= getID();
         String name = getName();
-        return "This " + name + " is level " + lv + " and has an Id of " + id; // Placeholder return value
+        return "Level: "+lv+", ID: "+id; // Placeholder return value
     }
 
     // equals method
