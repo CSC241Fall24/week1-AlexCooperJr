@@ -9,8 +9,11 @@ public class Ex1 {
      */
     public static long calculateGaussSum(long start, long step, int count) {
         int sum = 0;
-        for(long i=start;i<=100899;i+=step){
-            sum+=i;
+        int loops=0;
+        while(loops<count){
+            sum+=start;
+            start+=step;
+            loops+=1;
         }
         return sum; // This is a placeholder return value. Replace it with your calculation.
     }
